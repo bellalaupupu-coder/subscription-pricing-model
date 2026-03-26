@@ -262,6 +262,6 @@ with tab2:
         st.info(f"**微观行为分析**：在进入第2期的 {n_subscribers_period1} 名用户中，有 **{n_forgotten}** 人因为遗忘而默默接受了提价；而在 **{n_attentive}** 名清醒并检查账单的用户中，由于损失厌恶($\\lambda={lambda_val}$)，有 **{n_cancel_attentive}** 人觉得不划算而愤怒取消了订阅。")
 
 st.markdown("---")
-st.markdown("**Powered by Trae & Streamlit** | 祝你在丘成桐科学奖中取得好成绩！")
+st.markdown("**Powered by Bella** | 祝猪猪由由与我一起在丘成桐科学奖中取得好成绩！")
 
 
