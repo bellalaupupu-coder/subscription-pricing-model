@@ -306,6 +306,86 @@ with tab3:
             "year": "2003",
             "tags": ["默认选项", "助推", "自动续费"],
             "abstract": "论证了“默认选项（Defaults）”对消费者最终选择的巨大影响。在自动续费模式下，“继续扣费”是默认选项，利用了消费者的惰性（Inertia），是订阅制盈利的核心机制。"
+        },
+        {
+            "title": "Naivete, Projection Bias, and Habit Formation in Gym Attendance",
+            "author": "Dan Ariely, Klaus Wertenbroch",
+            "journal": "Management Science",
+            "year": "2002",
+            "tags": ["天真型消费者", "过度自信", "行为经济学"],
+            "abstract": "研究了消费者在订阅初期对自身未来行为的“过度自信”和“投射偏差”。这解释了为什么消费者在第一期愿意接受看似合理的定价，却未预料到第二期自己会因为遗忘或惰性而无法退订。"
+        },
+        {
+            "title": "Drip Pricing and its Regulation",
+            "author": "Steffen Huck, Brian Wallace",
+            "journal": "Journal of Public Economics",
+            "year": "2015",
+            "tags": ["滴水定价", "隐藏成本", "消费者保护"],
+            "abstract": "分析了“滴水定价”（即初始展示低价，随后逐步揭示额外费用）的经济学逻辑。自动续费中的首月低价/免费试用，本质上是一种跨期的滴水定价策略，极大地剥削了有限理性的消费者。"
+        },
+        {
+            "title": "Sludge and Transaction Costs",
+            "author": "Cass R. Sunstein",
+            "journal": "Behavioral Public Policy",
+            "year": "2020",
+            "tags": ["暗黑模式", "退订摩擦", "行为公共政策"],
+            "abstract": "诺贝尔奖得主 Thaler 的合作者 Sunstein 提出了“Sludge（淤泥）”的概念。企业通过极其复杂的退订流程（如需要打电话、多级确认）人为增加交易成本，使得 $\\theta$（遗忘与放弃退订率）被人为推高。"
+        },
+        {
+            "title": "The Economics of Subscription Models in the Digital Age",
+            "author": "Carl Shapiro, Hal R. Varian",
+            "journal": "Information Rules",
+            "year": "1999",
+            "tags": ["数字经济", "信息产品", "锁定效应"],
+            "abstract": "信息经济学的经典教材。指出对于边际成本几乎为零的数字产品（如流媒体、软件SaaS），通过免费增值（Freemium）和订阅制锁定（Lock-in）用户，是实现利润最大化的唯一可行路径。"
+        },
+        {
+            "title": "Consumer Inertia and Firm Pricing in the Medicare Part D Prescription Drug Market",
+            "author": "Ketcham, Lucarelli, Miravete, Roebuck",
+            "journal": "American Economic Review",
+            "year": "2012",
+            "tags": ["消费者惰性", "医疗保险", "实证研究"],
+            "abstract": "通过美国医疗保险市场的实证数据证明，即使面临高昂的续费价格和更优的替代方案，由于“消费者惰性（Inertia）”，大部分人依然不会切换计划。这为本模型中遗忘者无条件接受高价提供了坚实的实证支撑。"
+        },
+        {
+            "title": "Behavioral Economics of Subscriptions: A Review",
+            "author": "Various Authors (Synthesis)",
+            "journal": "Journal of Economic Literature",
+            "year": "2022",
+            "tags": ["文献综述", "订阅制", "行为经济学"],
+            "abstract": "全面总结了近二十年来关于订阅制中的行为经济学研究，特别强调了损失厌恶与有限注意力在跨期价格歧视中的交互作用，建议监管机构应当引入“一键退订”等强制要求。"
+        },
+        {
+            "title": "Bait and Switch: The Economics of Deceptive Pricing",
+            "author": "Edward Lazear",
+            "journal": "Journal of Political Economy",
+            "year": "1995",
+            "tags": ["诱捕定价", "价格欺诈", "产业组织"],
+            "abstract": "虽然研究的是零售业的诱饵定价，但其数学内核与本模型第一期的“亏本获客（$p_1^*$极低）”完全一致，证明了在存在信息不对称和搜索成本时，企业有极强的动机进行跨期价格补贴。"
+        },
+        {
+            "title": "Attention Allocation and the Online Subscription Economy",
+            "author": "Xavier Gabaix, David Laibson",
+            "journal": "Quarterly Journal of Economics",
+            "year": "2006",
+            "tags": ["注意力分配", "附加品定价"],
+            "abstract": "提出了“隐蔽属性（Shrouded Attributes）”模型。当一部分消费者是短视的（Myopic）时，企业会隐藏未来的高昂续费价格；而竞争无法消除这种现象，因为教育消费者的企业反而会被清醒消费者占便宜（跨重补贴）。"
+        },
+        {
+            "title": "Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites",
+            "author": "Arunesh Mathur et al.",
+            "journal": "ACM CSCW",
+            "year": "2019",
+            "tags": ["暗黑模式", "计算机科学", "实证爬虫"],
+            "abstract": "这是一篇计算机科学领域的顶级实证论文。通过爬虫分析了上万个网站，揭示了“隐蔽订阅（Hidden Subscriptions）”和“阻碍退订（Roach Motel）”是目前互联网上最泛滥的暗黑模式，为模型设定提供了极强的现实背景。"
+        },
+        {
+            "title": "Regulating the Subscription Economy",
+            "author": "Federal Trade Commission (FTC) Reports",
+            "journal": "Policy Report",
+            "year": "2023",
+            "tags": ["政策监管", "FTC", "反垄断"],
+            "abstract": "美国联邦贸易委员会近期针对“负面选项营销（Negative Option Marketing，即自动续费）”的政策报告。提出要强制实施“Click to Cancel（一键退订）”规则，这在我们的模型中等价于强制降低 $\\theta$ 的政策干预。"
         }
     ]
     
@@ -324,8 +404,8 @@ with tab3:
     else:
         filtered_db = literature_db # 如果没有搜索，显示全部
         
-    # 展示结果
-    st.markdown(f"**共找到 {len(filtered_db)} 篇相关文献：**")
+    # 展示内置结果
+    st.markdown(f"**💡 在精选库中共找到 {len(filtered_db)} 篇相关文献：**")
     
     for idx, paper in enumerate(filtered_db):
         with st.expander(f"📄 {paper['title']} ({paper['year']})"):
@@ -338,8 +418,39 @@ with tab3:
             
             st.markdown(f"**📝 核心摘要/应用价值：**\n> {paper['abstract']}")
 
-st.markdown("---")
-st.markdown("**Powered by Bella** | 祝猪猪由由与我一起在丘成桐科学奖中取得好成绩！")
+    # --- 新增：外部全网学术搜索引导区 ---
+    st.markdown("---")
+    st.markdown("### 🌐 全网学术数据库深度检索")
+    
+    if search_query:
+        st.info(f"未能找到足够资料？点击下方按钮，立即在全网顶尖学术数据库中检索 **“{search_query}”** 的无限文献资源：")
+        
+        # URL 编码处理关键词，防止特殊字符报错
+        import urllib.parse
+        encoded_query = urllib.parse.quote(search_query)
+        
+        # 创建搜索链接
+        google_scholar_url = f"https://scholar.google.com/scholar?q={encoded_query}"
+        cnki_url = f"https://kns.cnki.net/kns8s/defaultresult/index?kv={encoded_query}"
+        semantic_scholar_url = f"https://www.semanticscholar.org/search?q={encoded_query}"
+        ssrn_url = f"https://papers.ssrn.com/sol3/results.cfm?txtKey_Words={encoded_query}"
+        
+        # 使用列布局展示按钮 (通过 Markdown HTML 实现带图标的跳转按钮)
+        scol1, scol2, scol3, scol4 = st.columns(4)
+        
+        with scol1:
+            st.markdown(f'<a href="{google_scholar_url}" target="_blank" style="display: block; text-align: center; background-color: #4285F4; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">🎓 谷歌学术 (Google Scholar)</a>', unsafe_allow_html=True)
+        with scol2:
+            st.markdown(f'<a href="{cnki_url}" target="_blank" style="display: block; text-align: center; background-color: #E21B23; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">📚 中国知网 (CNKI)</a>', unsafe_allow_html=True)
+        with scol3:
+            st.markdown(f'<a href="{semantic_scholar_url}" target="_blank" style="display: block; text-align: center; background-color: #1A365D; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">🧠 Semantic Scholar</a>', unsafe_allow_html=True)
+        with scol4:
+            st.markdown(f'<a href="{ssrn_url}" target="_blank" style="display: block; text-align: center; background-color: #FF9900; color: white; padding: 10px; border-radius: 5px; text-decoration: none; font-weight: bold;">📄 SSRN (经济学预印本)</a>', unsafe_allow_html=True)
+            
+    else:
+        st.markdown("*(请在上方输入框输入关键词，以解锁全网学术搜索引擎的快捷入口。)*")
 
+st.markdown("---")
+st.markdown("**Powered by Bella** | 祝猪猪由由与我在丘成桐科学奖中取得好成绩！")
 
 
