@@ -451,6 +451,6 @@ with tab3:
         st.markdown("*(请在上方输入框输入关键词，以解锁全网学术搜索引擎的快捷入口。)*")
 
 st.markdown("---")
-st.markdown("**Powered by Bella** | 祝猪猪由由与我在丘成桐科学奖中取得好成绩！")
+st.markdown("**Powered by Bella** | 祝猪猪由由与我一起在丘成桐科学奖中取得好成绩！")
 
 
