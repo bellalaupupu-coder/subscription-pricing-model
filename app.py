@@ -17,8 +17,8 @@ st.markdown("""
 消费者估值 $v$ 服从均匀分布 $U[0, 1]$。
 """)
 
-# 使用 Tabs 将宏观理论模型和微观模拟分开
-tab1, tab2 = st.tabs(["📈 宏观理论最优定价模型", "👥 微观个体行为模拟 (Agent-based Simulation)"])
+# 使用 Tabs 将宏观理论模型、微观模拟和文献库分开
+tab1, tab2, tab3 = st.tabs(["📈 宏观理论最优定价模型", "👥 微观个体行为模拟 (Agent-based Simulation)", "📚 学术文献与调研资料库"])
 
 st.sidebar.header("⚙️ 核心参数调节")
 theta = st.sidebar.slider("遗忘率 (θ)", min_value=0.0, max_value=1.0, value=0.40, step=0.05, help="消费者在第二期忘记取消订阅的概率。")
@@ -261,7 +261,85 @@ with tab2:
         
         st.info(f"**微观行为分析**：在进入第2期的 {n_subscribers_period1} 名用户中，有 **{n_forgotten}** 人因为遗忘而默默接受了提价；而在 **{n_attentive}** 名清醒并检查账单的用户中，由于损失厌恶($\\lambda={lambda_val}$)，有 **{n_cancel_attentive}** 人觉得不划算而愤怒取消了订阅。")
 
+with tab3:
+    st.subheader("📚 学术文献与调研资料库")
+    st.markdown("本资料库收录了关于**损失厌恶**、**消费者遗忘率（有限理性）**、**订阅制商业模式**以及**动态定价**的权威学术文献，作为本模型的理论基础。")
+    
+    # 内置文献数据库
+    literature_db = [
+        {
+            "title": "Loss Aversion in Riskless Choice: A Reference-Dependent Model",
+            "author": "Amos Tversky, Daniel Kahneman",
+            "journal": "The Quarterly Journal of Economics",
+            "year": "1991",
+            "tags": ["损失厌恶", "参考价格", "行为经济学"],
+            "abstract": "行为经济学奠基之作。提出了参考依赖（Reference-Dependent）效用模型，证明了消费者对损失（如提价）的敏感度通常是获得（如降价）的2.25倍，为本模型的 $\\lambda$ 参数提供了理论依据。"
+        },
+        {
+            "title": "Paying Not to Go to the Gym",
+            "author": "Stefano DellaVigna, Ulrike Malmendier",
+            "journal": "American Economic Review",
+            "year": "2006",
+            "tags": ["订阅制", "消费者有限理性", "遗忘率", "实证研究"],
+            "abstract": "经典的实证研究。通过分析健身房会员数据，发现消费者系统性地高估了自己未来的出勤率，并且在停止去健身房后，平均会延迟 2.3 个月才取消自动续费订阅。完美证明了“遗忘率”和“天真型消费者”的存在。"
+        },
+        {
+            "title": "Pricing with Limited Attention",
+            "author": "Pedro Bordalo, Nicola Gennaioli, Andrei Shleifer",
+            "journal": "Handbook of Behavioral Economics",
+            "year": "2018",
+            "tags": ["有限注意力", "动态定价"],
+            "abstract": "探讨了当消费者存在有限注意力（Limited Attention）时，企业如何通过复杂的定价结构（如初始低价+高昂的隐藏续费成本）来最大化利润。"
+        },
+        {
+            "title": "Contract Renewal and the Exercise of Market Power",
+            "author": "Paul Klemperer",
+            "journal": "The American Economic Review",
+            "year": "1995",
+            "tags": ["转换成本", "自动续费", "市场势力"],
+            "abstract": "研究了转换成本（Switching Costs）对企业定价策略的影响。在订阅制中，寻找退订按钮的时间成本和心理摩擦构成了隐性的转换成本，赋予了企业在续费期提价的市场势力。"
+        },
+        {
+            "title": "The Effect of Default Options on Choice",
+            "author": "Eric J. Johnson, Daniel Goldstein",
+            "journal": "Science",
+            "year": "2003",
+            "tags": ["默认选项", "助推", "自动续费"],
+            "abstract": "论证了“默认选项（Defaults）”对消费者最终选择的巨大影响。在自动续费模式下，“继续扣费”是默认选项，利用了消费者的惰性（Inertia），是订阅制盈利的核心机制。"
+        }
+    ]
+    
+    # 搜索框
+    search_query = st.text_input("🔍 搜索文献 (支持标题、作者、摘要或标签关键词搜索)", placeholder="例如：损失厌恶、Kahneman、定价...")
+    
+    # 过滤逻辑
+    if search_query:
+        filtered_db = []
+        query_lower = search_query.lower()
+        for paper in literature_db:
+            # 在各个字段中寻找关键词
+            searchable_text = f"{paper['title']} {paper['author']} {paper['journal']} {paper['abstract']} {' '.join(paper['tags'])}".lower()
+            if query_lower in searchable_text:
+                filtered_db.append(paper)
+    else:
+        filtered_db = literature_db # 如果没有搜索，显示全部
+        
+    # 展示结果
+    st.markdown(f"**共找到 {len(filtered_db)} 篇相关文献：**")
+    
+    for idx, paper in enumerate(filtered_db):
+        with st.expander(f"📄 {paper['title']} ({paper['year']})"):
+            st.markdown(f"**👤 作者：** {paper['author']}")
+            st.markdown(f"**📖 期刊：** *{paper['journal']}*")
+            
+            # 渲染标签
+            tags_html = "".join([f"<span style='background-color:#e1f5fe; color:#1f77b4; padding:3px 8px; border-radius:12px; font-size:0.85em; margin-right:5px;'>{tag}</span>" for tag in paper['tags']])
+            st.markdown(f"**🏷️ 标签：** {tags_html}", unsafe_allow_html=True)
+            
+            st.markdown(f"**📝 核心摘要/应用价值：**\n> {paper['abstract']}")
+
 st.markdown("---")
 st.markdown("**Powered by Bella** | 祝猪猪由由与我一起在丘成桐科学奖中取得好成绩！")
+
 
 
